@@ -12,44 +12,44 @@
     }
   
     .card {
-      width: 20rem; /* w-80 */
+      width: 20rem;
       flex: 1;
-      border-radius: 0.5rem; /* rounded */
+      border-radius: 0.5rem;
       animation: pulse 1.5s ease-in-out infinite;
   
       .card-image {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 12rem; /* h-48 */
-        margin-bottom: 1rem; /* mb-4 */
-        background-color: #e5e7eb; /* bg-base-25 */
-        border-radius: 0.5rem; /* rounded */
+        height: 12rem;
+        margin-bottom: 1rem;
+        background-color: #e5e7eb;
+        border-radius: 0.5rem;
       }
   
       svg {
-        width: 2.5rem; /* w-10 */
-        height: 2.5rem; /* h-10 */
-        background-color: #e5e7eb; /* bg-base-25 */
+        width: 2.5rem; 
+        height: 2.5rem;
+        background-color: #e5e7eb;
       }
   
       .line {
-        height: 0.625rem; /* h-2.5 */
-        background-color: #e5e7eb; /* bg-base-25 */
-        border-radius: 9999px; /* rounded-full */
-        margin-bottom: 1rem; /* mb-4 */
+        height: 0.625rem;
+        background-color: #e5e7eb;
+        border-radius: 9999px;
+        margin-bottom: 1rem;
   
         &.small {
-          width: 12rem; /* w-48 */
+          width: 12rem;
         }
   
         &.medium {
-          width: 100%; /* w-full */
+          width: 100%;
         }
   
         &.thin {
           width: 100%;
-          background-color: #f3f4f6; /* bg-base-50 */
+          background-color: #f3f4f6;
         }
       }
   
@@ -57,19 +57,19 @@
         display: flex;
         align-items: center;
         margin-top: 1rem;
-        space-x: 0.75rem; /* space-x-3 */
+        space-x: 0.75rem;
   
         .footer-item {
           .line {
-            height: 0.625rem; /* h-2.5 */
-            background-color: #e5e7eb; /* bg-base-25 */
-            border-radius: 9999px; /* rounded-full */
-            margin-bottom: 0.5rem; /* mb-2 */
-            width: 8rem; /* w-32 */
+            height: 0.625rem;
+            background-color: #e5e7eb;
+            border-radius: 9999px;
+            margin-bottom: 0.5rem;
+            width: 8rem;
           }
   
           .line-large {
-            width: 12rem; /* w-48 */
+            width: 12rem;
           }
         }
       }
