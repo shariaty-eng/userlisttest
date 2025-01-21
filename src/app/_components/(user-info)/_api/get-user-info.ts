@@ -28,7 +28,6 @@ export const useFetchUserInfo = ({ params }: GetUsersOptions) => {
            
         getNextPageParam: (lastPage) => {
             const nextPage = lastPage.info.page + 1;
-            console.log('nextPage:', nextPage); // لاگ مقدار nextPage
             return nextPage <= 20 ? nextPage : undefined; // محدود کردن به 20 صفحه
         },
         

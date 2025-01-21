@@ -15,11 +15,10 @@ const UserInfo = () => {
             slug: 'infinit scroll'
         }
     })
+    console.log("🚀 ~ UserInfo ~ userInfo:", userInfo?.pages)
 
     useEffect(() => {
-        console.log('isFetchingNextPage...', isFetchingNextPage);
         if (inView && hasNextPage && !isFetchingNextPage) {
-            console.log('Fetching next page...');
             fetchNextPage();
         }
     }, [inView, hasNextPage, isFetchingNextPage, fetchNextPage]);
@@ -30,21 +29,12 @@ const UserInfo = () => {
         <>
             <div className='user-box'>
                 {userInfo?.pages?.map((page) =>
-                    page.results.map((user, index) => (
-                        <div className="user-details" key={`user-info-${index}`}>
-                           <Avatar
-                                src={user.picture.thumbnail}
-                                size="tiny"
-                            /> 
-                            <p className="user-nam">{user.name.first + ' ' + user.name.last}</p>
-                        </div>
-                    ))
+                    page.results.map((user, index) => renderUserDetails(user, index))
                 )}
             </div>
             {(isFetching || hasNextPage) && (
                 <div ref={ref}>
                     <CardPlaceholder />
-
                 </div>
             )}
         </>
@@ -52,3 +42,26 @@ const UserInfo = () => {
 }
 
 export default UserInfo
+
+const renderUserDetails = (user: any, index: number) => {
+    const { location, picture, name, id, gender, phone, email } = user;
+    const { country, city, street } = location;
+    const address = `${street.number}, ${street.name}`;
+    const locationString = `${address}, ${city}, ${country}`;
+    return (
+        <div className="user-details" key={`user-info-${user.id.value || index}`}>
+            <div className="left-side">
+                <Avatar src={picture.thumbnail} size="tiny" />
+                <span>
+                    <p className="user-name">{`${name.first} ${name.last}`}</p>
+                    <p className="user-gender">{`${id.name} / ${gender}`}</p>
+                </span>
+            </div>
+            <div className="center-part">
+                <p className="user-address">{phone}</p>
+                <p className="user-email">{email}</p>
+                <p className="user-address">{locationString}</p>
+            </div>
+        </div>
+    );
+};
