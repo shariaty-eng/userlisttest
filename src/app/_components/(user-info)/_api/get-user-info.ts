@@ -31,7 +31,6 @@ export const useFetchUserInfo = ({ params }: GetUsersOptions) => {
             return nextPage <= 20 ? nextPage : undefined; // محدود کردن به 20 صفحه
         },
         
-        
         initialPageParam: 1,
         staleTime: 5 * 60 * 60 * 1000,
         gcTime: 6 * 60 * 60 * 1000,

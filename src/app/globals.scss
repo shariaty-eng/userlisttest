@@ -20,4 +20,10 @@ body {
   text-decoration: none;
 }
 
-
+.container {
+  height: 100vh;
+    @media (min-width: 768px) {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}

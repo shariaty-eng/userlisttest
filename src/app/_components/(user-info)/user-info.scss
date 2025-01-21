@@ -1,53 +1,59 @@
+$primary-color: #3b82f6;
+$secondary-color: #8e8f91;
+$font-size-small: 12px;
+$font-size-medium: 16px;
+$font-size-large: 1rem;
+$font-weight-light: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$border-color: #cdd1d6;
+
 .user-box {
-   
-  }
-  .user-details { 
+  // Add any specific styles for .user-box here if needed
+}
+
+.user-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid $border-color;
+  padding: 10px;
+  margin: 1rem;
+
+  .left-side {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    border: 1px solid #cdd1d6;
-    padding: 10px;
-    margin: 1rem;
+
+    span {
+      margin-left: 15px;
+    }
   }
-  .user-name{
-    font-size: 1rem;
-    color: #3b82f6;
-    font-weight: 700;
+
+  .center-part {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-name {
+    font-size: $font-size-large;
+    color: $primary-color;
+    font-weight: $font-weight-bold;
     margin-bottom: 2px;
   }
-  .left-side{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  .left-side span{
-    // flex-direction: column;
-    // justify-items: flex-start;
-    margin-left: 15px;
+
+  .user-gender,
+  .user-address {
+    font-size: $font-size-small;
+    color: $secondary-color;
+    font-weight: $font-weight-medium;
+    margin-bottom: 2px;
   }
 
-  .user-gender{
-    font-size: 13px;
-    color: #8e8f91;
-    font-weight: 500;
+  .user-email {
+    font-size: $font-size-medium;
+    font-weight: $font-weight-medium;
+    color: $primary-color;
+    margin-bottom: 2px;
   }
-.center-part{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.user-address{
-  font-size: 12px;
-  color: #8e8f91;
-  font-weight: 400;
-  margin-bottom: 2px;
-}
-
-.user-email{
-  font-size: 16px;
-  font-weight: 600;
-  color: #3b82f6;
-  margin-bottom: 2px;
 }

@@ -15,7 +15,6 @@ const UserInfo = () => {
             slug: 'infinit scroll'
         }
     })
-    console.log("🚀 ~ UserInfo ~ userInfo:", userInfo?.pages)
 
     useEffect(() => {
         if (inView && hasNextPage && !isFetchingNextPage) {
